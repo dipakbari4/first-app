@@ -10,12 +10,16 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Changed variable scope to global
+    // Removed final keyword
+    private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final TextView textView = findViewById(R.id.sampleText);
+        textView = findViewById(R.id.sampleText);
 
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
